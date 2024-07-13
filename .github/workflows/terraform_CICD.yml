@@ -48,8 +48,8 @@ jobs:
         run: |
           aws eks --region ${{ secrets.AWS_REGION }} update-kubeconfig --name ${{ secrets.CLUSTER_NAME }}
           kubectl apply -k "github.com/kubernetes-sigs/aws-ebs-csi-driver/deploy/kubernetes/overlays/stable/?ref=release-1.31"
-          git clone https://github.com/fredritchie/3-tier-eks-manifests.git
-          cd 3-tier-eks-manifests
+          git clone https://github.com/Mauliksha/3-tier-eks-terraform.git
+          cd 3-tier-eks-terraform
           kubectl apply -f frontend_deployment.yaml
           kubectl apply -f backend.yaml
           kubectl apply -f service.yaml
