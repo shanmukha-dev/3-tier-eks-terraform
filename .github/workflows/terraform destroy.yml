@@ -37,4 +37,4 @@ jobs:
     - name: Terraform Destroy
       run: terraform destroy -auto-approve
       env:
-        TF_VAR_workspace: ${{ github.event.inputs.workspace }}
+        TF_VAR_workspace: ${{ 3-tier-eks-terraform }}
